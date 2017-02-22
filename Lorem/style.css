@@ -10,7 +10,6 @@ ul {
     top: 0;
     width: 100%;
 }
-
 li {
     float: left;
 }
@@ -31,12 +30,13 @@ li a:hover:not(.active) {
     background-color: #1a53ff;
 }
 footer {
-	background-color: #00FFFF;
+	background-color: #000000;
+	color: white;
 	border-style: double;
 	position: fixed;
     bottom: 0;
     width: 100%;
-	margin-right: 5px;
+	margin-left: -15px;
     padding-left: 10px;
 	overflow: hidden;
 }
@@ -44,16 +44,17 @@ body {
 	background-color: #66b3ff;
 }
 section {
-	background-color: brown;
-	width: 60%;
-	margin-left: 25%;
-	padding-left: 25px;
+	background-color: #606060;
+	width: 65%;
+	margin-left: 27%;
+	padding: 25px;
 }
 aside {
-	background-color: green;
-	position: absolute;
+	background-color: #909090;
+	position: fixed;
 	width: 20%;
 	height: 100%;
-	margin-top: -100px;
-	margin-left: 0;
+	margin-left: -15px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
