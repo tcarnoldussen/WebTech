@@ -47,5 +47,13 @@ section {
 	background-color: brown;
 	width: 60%;
 	margin-left: 25%;
-	padding-left: 15px;
+	padding-left: 25px;
+}
+aside {
+	background-color: green;
+	position: absolute;
+	width: 20%;
+	height: 100%;
+	margin-top: -100px;
+	margin-left: 0;
 }
