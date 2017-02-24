@@ -5,7 +5,7 @@ ul {
 	/*margin-right: -2px;*/
     padding: 0;
     overflow: hidden;
-    background-color: #000000;
+    background-color: #07575B;
 	position: fixed;
     top: 0;
     width: 100%;
@@ -27,14 +27,14 @@ li a {
 }
 	
 li a:hover:not(.active) {
-    background-color: #404040;
+    background-color: #849FA6;
 }
 
 .active {
-    background-color: #1a53ff;
+    background-color: #003b46;
 }
 footer {
-	background-color: #000000;
+	background-color: #07575B;
 	color: white;
 	border-style: double;
 	position: fixed;
@@ -45,15 +45,15 @@ footer {
 	overflow: hidden;
 }
 body {
-	background-color: #66b3ff;
+	background-color: #66A5AD;
 }
 section {
-	background-color: #606060;
+	background-color: #C4DFE6;
 	width: 65%;
 	margin-left: 27%;
 	margin-top: 20px;
 	padding: 25px;
-	box-shadow: 5px 5px 7px #757575;
+	box-shadow: 5px 5px 7px #4e5161;
 }
 #section1 {
 	margin-top: 100px;
