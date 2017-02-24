@@ -2,7 +2,6 @@ ul {
     list-style-type: none;
 	margin: 0;
     margin-left: -8px;
-	/*margin-right: -2px;*/
     padding: 0;
     overflow: hidden;
     background-color: #07575B;
@@ -24,6 +23,14 @@ li a {
 
 .white {
 	color: white;
+}
+
+.green {
+	background-color: #44FF55;
+}
+		
+.red {
+	background-color: #FF4455;
 }
 	
 li a:hover:not(.active) {
@@ -87,3 +94,56 @@ aside.AsideLeft {
 	width: 75%;
 	margin-top: 20px;
 }
+
+section.contact {
+	width: 75%;
+	margin: auto;
+	margin-top: 100px;
+}
+
+section.videos {
+	width: 75%;
+	margin: auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+section.more {
+	width: 75%;
+	margin: auto;
+	margin-top: 100px;
+}
+		
+div.videos {
+	position: relative;
+	background-color: #90afc5;
+	padding: 3%;
+}
+		
+div.videos1 {
+	position: relative;
+	padding: 3%;
+}
+		
+p.video {
+	position: absolute;
+	top: 25%;
+	left: 45%;
+	width: 50%;
+}
+		
+h2.video {
+	margin-top: 0;
+}
+		
+embed.video {
+	height: 197px;
+	width: 350px;
+}
+		
+table,th,td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: center;
+}
+		
