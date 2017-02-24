@@ -87,3 +87,14 @@ aside.AsideLeft {
 	width: 75%;
 	margin-top: 20px;
 }
+p.italic {
+    font-style: italic;
+}
+p.bold {
+    font-weight: bold;
+}
+p.quote{
+	padding-left: 60px;
+	padding-right: 125px;
+
+}
