@@ -5,21 +5,36 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<style>
-		section.videos {
-		    margin-left: 15%;
-			margin-top: 5%;
-			margin-bottom: 5%;
+		section.vid {
+		    margin: auto;
+			width: 75%;
+			margin-top: 100px;
 			}
+		
+		table,th,td {
+		    border: 1px solid black;
+			border-collapse: collapse;
+			text-align: center;
+		}
+		
+		.green {
+		    background-color: #44FF55;
+		}
+		
+		.red {
+		    background-color: #FF4455;
+		}
 		</style>
 	</head>
 	<body>
-	    <section class="videos">
+	    <section class="vid">
 		    
 			<h1>More about Hagfish, or why the Hagfish is one of the greatest animals alive.</h1>
 			
+			<p>If you aren't convinced already that the Hagfish is the greatest animal on the planet, 
+			here is a comparison conveniently laid out in a table for you to admire.</p>
 			
-			
-		    <table>
+		    <table class="more">
 			    <tr>
 					<th>Animal</th>
 					<th>Marine creature</th>
@@ -31,48 +46,48 @@
 				</tr>
 		        <tr>
 				    <td>Hagfish</td>
-					<td>Y</td>
-					<td>Can knot</td>
-					<td>Y</td>
-					<td>Y</td>
-					<td>Y</td>
-					<td>Y</td>
+					<td class="green">Y</td>
+					<td class="green">Can knot</td>
+					<td class="green">Y</td>
+					<td class="green">Y</td>
+					<td class="green">Y</td>
+					<td class="green">Y</td>
 				</tr>
 				<tr>
 				    <td>Horse</td>
-					<td>N</td>
-					<td>Cannot</td>
-					<td>N</td>
-					<td>N</td>
-					<td>N</td>
-					<td>N</td>
+					<td class="red">N</td>
+					<td class="red">Cannot</td>
+					<td class="red">N</td>
+					<td class="red">N</td>
+					<td class="red">N</td>
+					<td class="red">N</td>
 				</tr>
 				<tr>
 				    <td>Human</td>
-					<td>N</td>
-					<td>Can knot</td>
-					<td>N</td>
-					<td>Y</td>
-					<td>N</td>
-					<td>N</td>
+					<td class="red">N</td>
+					<td class="green">Can knot</td>
+					<td class="red">N</td>
+					<td class="green">Y</td>
+					<td class="red">N</td>
+					<td class="red">N</td>
 				</tr>
 				<tr>
 				    <td>Whale</td>
-					<td>Y</td>
-					<td>Cannot</td>
-					<td>N</td>
-					<td>Y</td>
-					<td>N</td>
-					<td>N</td>
+					<td class="green">Y</td>
+					<td class="red">Cannot</td>
+					<td class="red">N</td>
+					<td class="green">Y</td>
+					<td class="red">N</td>
+					<td class="red">N</td>
 				</tr>
 				<tr>
 				    <td>Coelacanth</td>
-					<td>Y</td>
-					<td>Cannot</td>
-					<td>N</td>
-					<td>Y</td>
-					<td>N</td>
-					<td>Y</td>
+					<td class="green">Y</td>
+					<td class="red">Cannot</td>
+					<td class="red">N</td>
+					<td class="green">Y</td>
+					<td class="red">N</td>
+					<td class="green">Y</td>
 				</tr>
 		    </table>
 	    </section>
