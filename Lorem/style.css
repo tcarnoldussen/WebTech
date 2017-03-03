@@ -159,3 +159,21 @@ p.quote{
 	padding-right: 125px;
 
 }
+.AboutUs {
+	margin: auto;
+	width: 75%;
+	margin-top: 100px;
+}
+.thomas{
+	margin-left: 35%;
+}
+.werre{
+	margin-left: 5%;
+}
+p.werre{
+	margin-top: -35px;
+	margin-left: 55%;
+}
+.floatright{
+	float: right;
+}
