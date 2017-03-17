@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<body>
+	<body id="body" contextmenu="menuRC">
 		<section class="recipes" id="section1">
 			<h1>Recipes</h1>
 			<p>
@@ -31,7 +31,7 @@
 			and then iritated (for example with a stick) and the slime that comes out of the hagfish is then harvested.
 		</p>
 		<br>
-		<img src="hagfishslime.jpg" alt="Hagfish Slime">
+		<img src="images/hagfishslime.jpg" alt="Hagfish Slime">
 		<p>
 			Source picture: <a href="http://www.iflscience.com/plants-and-animals/hagfish-slime-biomaterial-future/">IFL Science</a>
 		</p>
@@ -46,7 +46,7 @@
 			</p>
 			<br>
 			<p>
-			<img src="Kkomjangeo.jpg" alt="Kkomjangeo Bokkeum">
+			<img src="images/Kkomjangeo.jpg" alt="Kkomjangeo Bokkeum">
 			
 			<p>
 				Source picture: 
@@ -84,6 +84,18 @@
 				Serve at once with strong beer. Serves four.<br>
 			</p>
 		</section>
+		<menu type="context" id="menuRC">
+			<menu label="Change FontStyle">
+				<menuitem id="italicRC" label="Italic" onclick="makeItalic();"></menuitem>
+				<menuitem id="boldRC" label="Bold" onclick="makeBold();"></menuitem>
+				<menuitem id="underlineRC" label="Underline" onclick="makeUnderlined();"></menuitem>
+			</menu>
+			<menu label="Change FontSize">
+				<menuitem id="normalRC" Label="Normal" onclick="makeNormal();"></menuitem>
+				<menuitem id="bigRC" Label="Big" onclick="makeBig();"></menuitem>
+				<menuitem id="biggestRC" Label="Biggest" onclick="makeBiggest();"></menuitem>
+			</menu>
+		</menu>
 		<nav>
 			<ul>
 				<li class="nav"><a href="Main.html">Main</a></li>
