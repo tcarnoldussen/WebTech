@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<body>
+	<body id="body" contextmenu="menuRC">
 		<section class="AboutUs">
 			<h1>Who are we?</h1>
 			<p>
@@ -21,6 +21,18 @@
 			<p class="thomas">Thomas Arnoldussen<p>
 			<p class="werre">Werre Timmer<p>
 		</section>
+		<menu type="context" id="menuRC">
+			<menu label="Change FontStyle">
+				<menuitem id="italicRC" label="Italic" onclick="makeItalic();"></menuitem>
+				<menuitem id="boldRC" label="Bold" onclick="makeBold();"></menuitem>
+				<menuitem id="underlineRC" label="Underline" onclick="makeUnderlined();"></menuitem>
+			</menu>
+			<menu label="Change FontSize">
+				<menuitem id="normalRC" Label="Normal" onclick="makeNormal();"></menuitem>
+				<menuitem id="bigRC" Label="Big" onclick="makeBig();"></menuitem>
+				<menuitem id="biggestRC" Label="Biggest" onclick="makeBiggest();"></menuitem>
+			</menu>
+		</menu>
 		<nav>
 			<ul>
 				<li class="nav"><a href="Main.html">Main</a></li>
