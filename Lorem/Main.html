@@ -8,14 +8,15 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<body>
-		<aside class="AsideLeft">
+	<body id="body" contextmenu="menuRC">
+		<aside class="asideLeft">
 			<br><br><br>
 			<h3>Contents</h3>
 			<p><a href="#section1">Welcome</a></p>
 			<p><a href="#bodyfeatures">Body features</a></p>
 			<p><a href="#food">Food</a></p>
-			<p><a href="#LastSection">Slime</a></p>
+			<p><a href="#slime">Slime</a></p>
+			<p><a href="#lastSection">Map</a></p>
 		</aside>
 		<section id="section1" class="main">
 			<h1>Welcome</h1>
@@ -26,7 +27,7 @@
 				And last but not least you will find videos and pictures, so sit back and relax.
 			</p>
 			<br>
-			<img class="pic1" src="hagfish1.jpg" alt="Hagfish 1">
+			<img class="pic1" src="images/hagfish1.jpg" alt="Hagfish 1">
 			<p>
 				Source picture: <a href="https://theethogram.com/2015/01/26/creature-feature-hagfish/">The Ethogram</a>
 			</p>
@@ -52,7 +53,7 @@
 				Source: <a href="https://en.wikipedia.org/wiki/Hagfish">Wikipedia</a>
 			</p>
 			<br>
-			<img class="pic2" src="hagfish2.jpg" alt="Hagfish 2">
+			<img class="pic2" src="images/hagfish2.jpg" alt="Hagfish 2">
 			<p>
 				Source picture: 
 				<a href="http://www.dailymail.co.uk/sciencetech/article-3406314/Now-disgusting-Secret-hagfish-slimes-predators-death-revealed-used-nappies.html">
@@ -74,13 +75,13 @@
 				Smithsonian Chanel</a>
 			</p>
 			<br>
-			<img class="pic3" src="hagfishteeth.jpg" alt="Hagfish Teeth">
+			<img class="pic3" src="images/hagfishteeth.jpg" alt="Hagfish Teeth">
 			<p>
 			Source picture: <a href="https://i.ytimg.com/vi/3KYpB4Rlywo/hqdefault.jpg">Still</a> from video <a href="https://www.youtube.com/watch?v=3KYpB4Rlywo">
 			Epic Wildlife</a>
 			</p>
 		</section>
-		<section id="LastSection" class="main">
+		<section id="slime" class="main">
 			<h2>Slime</h2>
 			<p>
 				The hagfish has about 100 glands on it's body from which it can produse a lot of milky and fibrous slime. When hagfish are
@@ -92,12 +93,135 @@
 				Source: <a href="https://en.wikipedia.org/wiki/Hagfish">Wikipedia</a>
 			</p>
 			<br>
-			<img class="pic4" src="hagfish3.jpg" alt="Hagfish 3">
+			<img class="pic4" src="images/hagfish3.jpg" alt="Hagfish 3">
 			<p>
 				Source picture: <a href="http://www.mnn.com/earth-matters/animals/photos/15-animals-that-are-living-fossils/hagfish">
 				Mother Nature Network</a>
 			</p>
-		</section>			
+		</section>	
+		<section id="lastSection" class="main">
+			<h2>Hagfish on Google Maps</h2>
+
+			<div id="map" style="width:600px;height:400px;background:blue">
+				<p>
+					Aparently something has gone wrong with the connection with Google Maps, 
+					or the world as we knew it has stoped existing, and has turned into a blue rectangle.
+					Either way, we are terribly sorry for the inconveniance.
+				</p>
+			</div>
+
+			<script>			
+			var map;
+			function initMap() {
+				map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 2,
+					center: new google.maps.LatLng(5, 145),
+					mapTypeId: 'hybrid'
+				});
+
+				var icons = {
+				  hagfish: {
+					icon: 'hagfish-icon.png'
+					
+				  }
+				};
+
+				function addMarker(feature) {
+				  var marker = new google.maps.Marker({
+					position: feature.position,
+					icon: icons[feature.type].icon,
+					map: map,
+				  });
+				}
+
+				var features = [
+				  {
+					position: new google.maps.LatLng(-33.91721, 151.22630),
+					type: 'hagfish'
+				  }, {
+					position: new google.maps.LatLng(-33.91727341958453, 151.23348314155578),
+					type: 'library'
+				  }
+				];
+
+				for (var i = 0, feature; feature = features[i]; i++) {
+				  addMarker(feature);
+				}
+			}
+			</script>
+			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLpINeGF3IYbB3XJpe2L1azon7kDLoLxM&callback=initMap"></script>
+		</section>
+
+		<menu type="context" id="menuRC">
+			<menu label="Change FontStyle">
+				<menuitem id="italicRC" label="Italic" onclick="makeItalic();"></menuitem>
+				<menuitem id="boldRC" label="Bold" onclick="makeBold();"></menuitem>
+				<menuitem id="underlineRC" label="Underline" onclick="makeUnderlined();"></menuitem>
+			</menu>
+			<menu label="Change FontSize">
+				<menuitem id="normalRC" Label="Normal" onclick="makeNormal();"></menuitem>
+				<menuitem id="bigRC" Label="Big" onclick="makeBig();"></menuitem>
+				<menuitem id="biggestRC" Label="Biggest" onclick="makeBiggest();"></menuitem>
+			</menu>
+		</menu>
+		<script>
+			function makeItalic() {
+				var allText = document.getElementById("body");
+				allText.style.fontStyle = "italic";
+				italicRCElement = document.getElementById("italicRC");
+				italicRCElement.label = "No Italic";
+				italicRCElement.onclick = noItalic;
+			}
+			function noItalic() {
+				var allText = document.getElementById("body");
+				allText.style.fontStyle = "normal";
+				italicRCElement = document.getElementById("italicRC");
+				italicRCElement.label = "Italic";
+				italicRCElement.onclick = makeItalic;
+			}
+			function makeBold() {
+				var allText = document.getElementById("body");
+				allText.style.fontWeight = "bold";
+				boldRCElement = document.getElementById("boldRC");
+				boldRCElement.label = "No Bold";
+				boldRCElement.onclick = noBold;
+			}
+			function noBold() {
+				var allText = document.getElementById("body");
+				allText.style.fontWeight = "normal";
+				boldRCElement = document.getElementById("boldRC");
+				boldRCElement.label = "Bold";
+				boldRCElement.onclick = makeBold;
+			}
+			function makeUnderlined(){
+				var allText = document.getElementById("body");
+				allText.style.textDecoration = "underline";
+				UnderlineRCElement = document.getElementById("underlineRC");
+				UnderlineRCElement.label = "Not Underlined";
+				UnderlineRCElement.onclick = notUnderlined;
+			}
+			function notUnderlined() {
+				var allText = document.getElementById("body");
+				allText.style.textDecoration = "none";
+				allText.style.text= "normal";
+				UnderlineRCElement = document.getElementById("underlineRC");
+				UnderlineRCElement.label = "Underline";
+				UnderlineRCElement.onclick = makeUnderlined;
+			}
+			function makeNormal() {
+				var allText = document.getElementById("body");
+				allText.style.fontSize = "16px";
+			}
+			function makeBig() {
+				var allText = document.getElementById("body");
+				allText.style.fontSize = "21px";
+			}
+			function makeBiggest() {
+				var allText = document.getElementById("body");
+				allText.style.fontSize = "26px";
+			}
+		</script>
+		
 		<nav>
 			<ul>
 				<li class="nav"><a class="active" href="Main.html">Main</a></li>
